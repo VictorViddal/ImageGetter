@@ -25,7 +25,7 @@ class ImageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupValues(viewModel: NoInternetCellViewModel) {
+    func setupValues(viewModel: ImageCellViewModel) {
         self.imageCell1.image = viewModel.model?.Image1
         self.imageCell2.image = viewModel.model?.Image2
         self.imageCell3.image = viewModel.model?.Image3

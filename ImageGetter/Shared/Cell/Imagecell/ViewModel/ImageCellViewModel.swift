@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NoInternetCellViewModel {
+class ImageCellViewModel {
 
     var model: ImageCellModel?
 

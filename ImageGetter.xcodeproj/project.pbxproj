@@ -21,6 +21,8 @@
 		A836CD3327C4643000C6E409 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A836CD3127C4643000C6E409 /* ImageTableViewCell.xib */; };
 		A836CD3527C465BD00C6E409 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836CD3427C465BD00C6E409 /* ImageCellViewModel.swift */; };
 		A836CD3727C465DD00C6E409 /* ImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836CD3627C465DD00C6E409 /* ImageCellModel.swift */; };
+		A836CD3927C4687F00C6E409 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836CD3827C4687F00C6E409 /* ViewControllerViewModel.swift */; };
+		A836CD3B27C46CBC00C6E409 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836CD3A27C46CBC00C6E409 /* ViewControllerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		A836CD3127C4643000C6E409 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		A836CD3427C465BD00C6E409 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
 		A836CD3627C465DD00C6E409 /* ImageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellModel.swift; sourceTree = "<group>"; };
+		A836CD3827C4687F00C6E409 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
+		A836CD3A27C46CBC00C6E409 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 		A836CD2727C4629E00C6E409 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A836CD3A27C46CBC00C6E409 /* ViewControllerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 		A836CD2927C462AE00C6E409 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A836CD3827C4687F00C6E409 /* ViewControllerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -364,7 +370,9 @@
 			files = (
 				A836CD3727C465DD00C6E409 /* ImageCellModel.swift in Sources */,
 				A836CCF727C4625800C6E409 /* ViewController.swift in Sources */,
+				A836CD3B27C46CBC00C6E409 /* ViewControllerModel.swift in Sources */,
 				A836CCF327C4625800C6E409 /* AppDelegate.swift in Sources */,
+				A836CD3927C4687F00C6E409 /* ViewControllerViewModel.swift in Sources */,
 				A836CD3527C465BD00C6E409 /* ImageCellViewModel.swift in Sources */,
 				A836CD3227C4643000C6E409 /* ImageTableViewCell.swift in Sources */,
 				A836CCFD27C4625800C6E409 /* ImageGetter.xcdatamodeld in Sources */,
