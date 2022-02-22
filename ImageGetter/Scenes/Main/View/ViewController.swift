@@ -19,10 +19,16 @@ class ViewController: UIViewController {
     }
     
     private func loadData() {
-        
+        viewModel.fetchImages(id: 0) {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     private func registerNibs() {
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(UINib(nibName: "ImageTableViewCell", bundle: .main),
                            forCellReuseIdentifier: "ImageTableViewCell")
     }

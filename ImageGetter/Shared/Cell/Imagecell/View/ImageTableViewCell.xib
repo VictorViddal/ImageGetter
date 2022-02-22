@@ -9,36 +9,36 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageTableViewCell" rowHeight="130" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="ImageGetter" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="438" height="130"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageTableViewCell" rowHeight="237" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="ImageGetter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="237"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="438" height="130"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="237"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Wm-AD-6xz">
-                        <rect key="frame" x="16" y="25" width="80" height="80"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Wm-AD-6xz">
+                        <rect key="frame" x="16" y="78.5" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="H6p-r2-ino"/>
                             <constraint firstAttribute="width" constant="80" id="lBR-9V-fcc"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yw9-2I-834">
-                        <rect key="frame" x="126" y="25" width="80" height="80"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yw9-2I-834">
+                        <rect key="frame" x="125" y="78.5" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="rPz-HG-qha"/>
                             <constraint firstAttribute="width" constant="80" id="z2F-qR-eRu"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-d1-9qp">
-                        <rect key="frame" x="236" y="25" width="80" height="80"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-d1-9qp">
+                        <rect key="frame" x="235" y="78.5" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="cZp-eb-7fe"/>
                             <constraint firstAttribute="width" constant="80" id="qRy-cP-mZW"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9wR-y4-Ppl">
-                        <rect key="frame" x="346" y="25" width="80" height="80"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9wR-y4-Ppl">
+                        <rect key="frame" x="345" y="78.5" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="jtH-Gw-cXm"/>
                             <constraint firstAttribute="width" constant="80" id="uzf-zl-rUp"/>
@@ -49,7 +49,6 @@
                     <constraint firstAttribute="trailing" secondItem="9wR-y4-Ppl" secondAttribute="trailing" constant="16" id="57F-Qj-v8J"/>
                     <constraint firstItem="9wR-y4-Ppl" firstAttribute="leading" secondItem="aRS-d1-9qp" secondAttribute="trailing" constant="30" id="DIy-VY-AP7"/>
                     <constraint firstItem="yw9-2I-834" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PZO-l5-bSc"/>
-                    <constraint firstItem="yw9-2I-834" firstAttribute="leading" secondItem="7Wm-AD-6xz" secondAttribute="trailing" constant="30" id="W6e-s1-umU"/>
                     <constraint firstItem="aRS-d1-9qp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cg2-6H-dvS"/>
                     <constraint firstItem="7Wm-AD-6xz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ckQ-D9-XxK"/>
                     <constraint firstItem="9wR-y4-Ppl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gIh-Vw-F91"/>
@@ -64,7 +63,7 @@
                 <outlet property="imageCell3" destination="aRS-d1-9qp" id="hTs-wV-bht"/>
                 <outlet property="imageCell4" destination="9wR-y4-Ppl" id="Y4x-Ky-wsf"/>
             </connections>
-            <point key="canvasLocation" x="217.39130434782609" y="159.375"/>
+            <point key="canvasLocation" x="219.56521739130437" y="195.20089285714286"/>
         </tableViewCell>
     </objects>
 </document>

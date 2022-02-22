@@ -40,20 +40,21 @@ class ServiceLayer {
         task.resume()
       }
     
-    func downloadImage(imageUrls: [String], completion: @escaping (_ images: [UIImage?]) -> Void) {
+    func downloadImages(imageUrls: [String?], completion: @escaping (_ images: [UIImage?]) -> Void) {
         // Create URL
         var imageArray: [UIImage] = []
         var downloadCounter = 0
             
             for link in imageUrls {
-                guard let url = URL(string: link) else {return}
+                guard let url = URL(string: link ?? "") else {return}
                 let  downloadQueue = DispatchQueue(label: "imageDowmloadQueue")
                 
                 downloadQueue.sync {
                     downloadCounter += 1
-                    if let data = NSData(contentsOf: url) {
+                    if let data = try? Data(contentsOf: url) {
                         //image data ready and need to be converted to UIImage
-                        imageArray.append(UIImage(data: data as Data)!)
+                        let image = UIImage(data: data) ?? UIImage()
+                        imageArray.append(image)
                         
                         if downloadCounter == imageArray.count {
                             DispatchQueue.main.async {

@@ -10,32 +10,42 @@ import UIKit
 class ViewControllerViewModel {
     private var model: ViewControllerModel?
     private var service: ViewControllerProtocol?
-    
+    private var images: [UIImage?] = []
     init(model: ViewControllerModel = ViewControllerModel(images: []), service: ViewControllerProtocol = MainService()) {
         self.model = model
         self.service = service
     }
     
-    private func fetchlinks(id: Int, completionHandler: @escaping (ViewControllerResponse) -> Void) {
+    func fetchImages(id: Int, completionHandler:  @escaping () -> Void) {
         service?.getimageLinks(id: id, completionHandler: { response in
-            print(response)
+            let images = response.data.compactMap({$0.images?.first})
+            let links = images.map({$0?.link})
+            self.service?.getImages(imageUrls: links, completion: { images in
+                print(images)
+                self.images.append(contentsOf: images)
+                completionHandler()
+            })
         })
     }
     
-    func
 }
 
 extension ViewControllerViewModel {
     
     func numberOfRows() -> Int {
-        return model?.images.count ?? 0
+        let rows = CGFloat(images.count/4).rounded(.down)
+        return Int(rows)
     }
     
     func generateCell(for tableView: UITableView,
                       indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImagetableViewCell",
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell",
                                                        for: indexPath) as? ImageTableViewCell else { return UITableViewCell() }
-        let imageModel = ImageCellModel(Image1: UIImage(), Image2: UIImage(), Image3: UIImage(), Image4: UIImage())
+        
+        let imageModel = ImageCellModel(Image1: images[0 + (indexPath.row * 4)],
+                                        Image2: images[1 + (indexPath.row * 4)],
+                                        Image3: images[2 + (indexPath.row * 4)],
+                                        Image4: images[3 + (indexPath.row * 4)])
         let imageCellViewModel = ImageCellViewModel ()
         imageCellViewModel.create(model: imageModel)
         return cell
