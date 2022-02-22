@@ -22,7 +22,7 @@ class ViewControllerViewModel {
             let links = images.map({$0?.link})
             self.service?.getImages(imageUrls: links, completion: { images in
                 print(images)
-                self.images.append(contentsOf: images)
+                self.images = images.filter({$0 != UIImage()})
                 completionHandler()
             })
         })
@@ -46,8 +46,9 @@ extension ViewControllerViewModel {
                                         Image2: images[1 + (indexPath.row * 4)],
                                         Image3: images[2 + (indexPath.row * 4)],
                                         Image4: images[3 + (indexPath.row * 4)])
-        let imageCellViewModel = ImageCellViewModel ()
+        let imageCellViewModel = ImageCellViewModel()
         imageCellViewModel.create(model: imageModel)
+        cell.setupValues(viewModel: imageCellViewModel)
         return cell
     }
 }
