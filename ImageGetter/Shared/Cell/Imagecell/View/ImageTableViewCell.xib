@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="ImageGetter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="438" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Wm-AD-6xz">
+                        <rect key="frame" x="16" y="25" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="H6p-r2-ino"/>
+                            <constraint firstAttribute="width" constant="80" id="lBR-9V-fcc"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yw9-2I-834">
+                        <rect key="frame" x="126" y="25" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="rPz-HG-qha"/>
+                            <constraint firstAttribute="width" constant="80" id="z2F-qR-eRu"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-d1-9qp">
+                        <rect key="frame" x="236" y="25" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="cZp-eb-7fe"/>
+                            <constraint firstAttribute="width" constant="80" id="qRy-cP-mZW"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9wR-y4-Ppl">
+                        <rect key="frame" x="346" y="25" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="jtH-Gw-cXm"/>
+                            <constraint firstAttribute="width" constant="80" id="uzf-zl-rUp"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9wR-y4-Ppl" secondAttribute="trailing" constant="16" id="57F-Qj-v8J"/>
+                    <constraint firstItem="9wR-y4-Ppl" firstAttribute="leading" secondItem="aRS-d1-9qp" secondAttribute="trailing" constant="30" id="DIy-VY-AP7"/>
+                    <constraint firstItem="yw9-2I-834" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PZO-l5-bSc"/>
+                    <constraint firstItem="yw9-2I-834" firstAttribute="leading" secondItem="7Wm-AD-6xz" secondAttribute="trailing" constant="30" id="W6e-s1-umU"/>
+                    <constraint firstItem="aRS-d1-9qp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cg2-6H-dvS"/>
+                    <constraint firstItem="7Wm-AD-6xz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ckQ-D9-XxK"/>
+                    <constraint firstItem="9wR-y4-Ppl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gIh-Vw-F91"/>
+                    <constraint firstItem="aRS-d1-9qp" firstAttribute="leading" secondItem="yw9-2I-834" secondAttribute="trailing" constant="30" id="hzq-Rb-N1q"/>
+                    <constraint firstItem="7Wm-AD-6xz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yoJ-Rc-tyk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageCell1" destination="7Wm-AD-6xz" id="Cru-hN-NA5"/>
+                <outlet property="imageCell2" destination="yw9-2I-834" id="5Ke-hC-TRQ"/>
+                <outlet property="imageCell3" destination="aRS-d1-9qp" id="hTs-wV-bht"/>
+                <outlet property="imageCell4" destination="9wR-y4-Ppl" id="Y4x-Ky-wsf"/>
+            </connections>
+            <point key="canvasLocation" x="217.39130434782609" y="159.375"/>
+        </tableViewCell>
+    </objects>
+</document>
