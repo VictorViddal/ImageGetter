@@ -9,11 +9,20 @@ import Foundation
 import UIKit
 class ViewControllerViewModel {
     private var model: ViewControllerModel?
+    private var service: ViewControllerProtocol?
     
-    init(model: ViewControllerModel = ViewControllerModel(images: [])) {
+    init(model: ViewControllerModel = ViewControllerModel(images: []), service: ViewControllerProtocol = MainService()) {
         self.model = model
+        self.service = service
     }
     
+    private func fetchlinks(id: Int, completionHandler: @escaping (ViewControllerResponse) -> Void) {
+        service?.getimageLinks(id: id, completionHandler: { response in
+            print(response)
+        })
+    }
+    
+    func
 }
 
 extension ViewControllerViewModel {

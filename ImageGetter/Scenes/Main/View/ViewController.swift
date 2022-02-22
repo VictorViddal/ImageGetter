@@ -14,6 +14,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        registerNibs()
+        loadData()
+    }
+    
+    private func loadData() {
+        
     }
     
     private func registerNibs() {
