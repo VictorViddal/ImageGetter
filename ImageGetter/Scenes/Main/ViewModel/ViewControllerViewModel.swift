@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 class ViewControllerViewModel {
-    private var model: ViewControllerModel?
     private var service: ViewControllerProtocol?
     private var images: [UIImage?] = []
-    init(model: ViewControllerModel = ViewControllerModel(images: []), service: ViewControllerProtocol = MainService()) {
-        self.model = model
+    private var count: Int? = 0
+    
+    init(service: ViewControllerProtocol = MainService()) {
         self.service = service
     }
     
@@ -28,6 +28,10 @@ class ViewControllerViewModel {
         })
     }
     
+    func newPagesForImages() -> Int {
+        guard let page = count else {return 0}
+        return page + 1
+    }
 }
 
 extension ViewControllerViewModel {

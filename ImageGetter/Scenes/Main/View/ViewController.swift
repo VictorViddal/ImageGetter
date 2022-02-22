@@ -49,5 +49,13 @@ extension ViewController: UITableViewDataSource {
         return viewModel.generateCell(for: tableView, indexPath: indexPath)
     }
     
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.numberOfRows() || indexPath.row == 0 { 
+            viewModel.fetchImages(id: viewModel.newPagesForImages()) {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
